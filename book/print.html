@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="EVM/EVM.html"><strong aria-hidden="true">1.</strong> Ethereum Virtual Machine (EVM)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="EVM/Resources.html"><strong aria-hidden="true">1.1.</strong> Resources</a></li></ol></li><li class="chapter-item expanded "><a href="smart-contract-languages/smart-contract-languagess.html"><strong aria-hidden="true">2.</strong> Smart Contract Languages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="smart-contract-languages/solidity.html"><strong aria-hidden="true">2.1.</strong> Solidity</a></li><li class="chapter-item expanded "><a href="smart-contract-languages/yuul.html"><strong aria-hidden="true">2.2.</strong> Yuul</a></li><li class="chapter-item expanded "><a href="smart-contract-languages/vyper.html"><strong aria-hidden="true">2.3.</strong> Vyper</a></li><li class="chapter-item expanded "><a href="smart-contract-languages/rust.html"><strong aria-hidden="true">2.4.</strong> Rust</a></li></ol></li><li class="chapter-item expanded "><a href="smart-contracts/smart-contracts.html"><strong aria-hidden="true">3.</strong> Smart Contracts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="smart-contracts/basics.html"><strong aria-hidden="true">3.1.</strong> Basics</a></li><li class="chapter-item expanded "><a href="smart-contracts/security.html"><strong aria-hidden="true">3.2.</strong> Security</a></li></ol></li><li class="chapter-item expanded "><a href="tools/tools.html"><strong aria-hidden="true">4.</strong> Tools / Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tools/developer-environment.html"><strong aria-hidden="true">4.1.</strong> Developer Environment</a></li><li class="chapter-item expanded "><a href="tools/fuzzers.html"><strong aria-hidden="true">4.2.</strong> Fuzzers</a></li><li class="chapter-item expanded "><a href="tools/security.html"><strong aria-hidden="true">4.3.</strong> Security</a></li></ol></li><li class="chapter-item expanded "><a href="rollups/rollups.html"><strong aria-hidden="true">5.</strong> Rollups</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rollups/optimistic.html"><strong aria-hidden="true">5.1.</strong> Optimistic</a></li><li class="chapter-item expanded "><a href="rollups/zero-knowledge.html"><strong aria-hidden="true">5.2.</strong> Zero Knowledge</a></li><li class="chapter-item expanded "><a href="rollups/plasma.html"><strong aria-hidden="true">5.3.</strong> Plasma</a></li></ol></li><li class="chapter-item expanded "><a href="cryptography/cryptography.html"><strong aria-hidden="true">6.</strong> Cryptography</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cryptography/ecdsa.html"><strong aria-hidden="true">6.1.</strong> ECDSA </a></li><li class="chapter-item expanded "><a href="cryptography/snor.html"><strong aria-hidden="true">6.2.</strong> SNOR</a></li><li class="chapter-item expanded "><a href="cryptography/bls.html"><strong aria-hidden="true">6.3.</strong> BLS</a></li></ol></li><li class="chapter-item expanded "><a href="hacking/hacking.html"><strong aria-hidden="true">7.</strong> Hacking</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hacking/resources.html"><strong aria-hidden="true">7.1.</strong> Resources</a></li><li class="chapter-item expanded "><a href="hacking/community.html"><strong aria-hidden="true">7.2.</strong> Community / Bounty Places</a></li><li class="chapter-item expanded "><a href="hacking/challenges.html"><strong aria-hidden="true">7.3.</strong> Games / Challenges</a></li></ol></li><li class="chapter-item expanded "><a href="defi/defi.html"><strong aria-hidden="true">8.</strong> DeFi</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="defi/resources.html"><strong aria-hidden="true">8.1.</strong> Resources</a></li></ol></li><li class="chapter-item expanded "><a href="eth2/eth2.html"><strong aria-hidden="true">9.</strong> The Merge (former ETH2)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="eth2/resources.html"><strong aria-hidden="true">9.1.</strong> Resources</a></li></ol></li><li class="chapter-item expanded "><a href="mev/mev.html"><strong aria-hidden="true">10.</strong> MEV</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="mev/resources.html"><strong aria-hidden="true">10.1.</strong> Resources</a></li></ol></li><li class="chapter-item expanded "><a href="podcasts/podcasts.html"><strong aria-hidden="true">11.</strong> Podcasts</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="welcome-to-the-ethereum-virtual-machine-book-"><a class="header" href="#welcome-to-the-ethereum-virtual-machine-book-"><strong>Welcome to the Ethereum Virtual Machine Book</strong> !</a></h1>
+<br>
+<br>
+<br>
+<br>
+<img src="images/violet.png" style="border-radius: 20px"/>
+<br>
+<br>
+<br>
+<br>
+<h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<h2 id="the-evm-ecosystem-moves-extremely-fast-this-means-that-a-lot-of-things-that-we-learn-today-are-going-to-be-outaded-tomorrow-and-i-literally-mean-tomorrow"><a class="header" href="#the-evm-ecosystem-moves-extremely-fast-this-means-that-a-lot-of-things-that-we-learn-today-are-going-to-be-outaded-tomorrow-and-i-literally-mean-tomorrow">The EVM ecosystem moves extremely fast. This means that a lot of things that we learn today are going to be outaded tomorrow (and I literally mean tomorrow).</a></h2>
+<h2 id="being-able-to-share-information-learnings-from-one-generation-to-another-is-one-of-the-most-important-characterstics-that-makes-us-humans-different-from-other-species-in-humanity-the-faster-we-are-able-to-communicate-with-each-other-send-messages-the-faster-we-evolve-in-a-technological-manner"><a class="header" href="#being-able-to-share-information-learnings-from-one-generation-to-another-is-one-of-the-most-important-characterstics-that-makes-us-humans-different-from-other-species-in-humanity-the-faster-we-are-able-to-communicate-with-each-other-send-messages-the-faster-we-evolve-in-a-technological-manner">Being able to share information (learnings) from one generation to another is one of the most important characterstics that makes us humans different from other species. In humanity, the faster we are able to communicate with each other (send messages), the faster we evolve in a technological manner.</a></h2>
+<h2 id="in-blockchain-things-move-very-very-fast-if-you-are-a-developer-you-know-what-i-mean"><a class="header" href="#in-blockchain-things-move-very-very-fast-if-you-are-a-developer-you-know-what-i-mean">In Blockchain, things move very very fast. If you are a developer, you know what I mean.</a></h2>
+<h2 id="the-main-purpose-of-this-book-is-to-have-a-concentration-of-resources-that-enable-us-to-be-up-to-date-with-the-latest-research-and-tooling-about-the-evm-in-other-words-an-evolving"><a class="header" href="#the-main-purpose-of-this-book-is-to-have-a-concentration-of-resources-that-enable-us-to-be-up-to-date-with-the-latest-research-and-tooling-about-the-evm-in-other-words-an-evolving">The main purpose of this &quot;book&quot; is to have a concentration of resources that enable us to be up to date with the latest research and tooling about the EVM. In other words, an evolving</a></h2>
+<br>
+<br>
+<br>
+<br>
+<h1 id="who-this-book-is-for-"><a class="header" href="#who-this-book-is-for-">Who this book is for ?</a></h1>
+<p>This book is primarily for: 1. Developers - all levels</p>
+<h2 id="2-researchers"><a class="header" href="#2-researchers">2. Researchers</a></h2>
+<h2 id="3-hackers"><a class="header" href="#3-hackers">3. Hackers</a></h2>
+<h2 id="4-people-that-are-curious-about-understanding-how-things-work"><a class="header" href="#4-people-that-are-curious-about-understanding-how-things-work">4. People that are curious about understanding how things work</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ethereum-virtual-machine-evm"><a class="header" href="#ethereum-virtual-machine-evm"><strong>Ethereum Virtual Machine (EVM)</strong></a></h1>
+<ul>
+<li>
+<p>At the heart of the Ethereum protocol and operation is the Ethereum Virtual Machine, or EVM for short. <strong>-- Andreas Antonopoulos</strong></p>
+</li>
+<li>
+<p>EVM is the Lingua Franca of Smart Contracts <strong>-- Daniel Ferrin</strong></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="resources"><a class="header" href="#resources"><strong>Resources</strong></a></h2>
+<p><strong><a href="https://ethereum.github.io/yellowpaper/paper.pdf"><code>1.The Yellow Paper</code></a></strong>:  Main Ethereum Specification.</p>
+<p><strong><a href="https://github.com/chronaeon/beigepaper/blob/master/beigepaper.pdf"><code>2. Beige Paper</code></a></strong>: More digestable than the Yellow Paper.</p>
+<p><strong><a href="https://noxx.substack.com/"><code>3. Evm-Deep-Dives by Noxx</code></a></strong>: Great hands-on explanation of how the EVM works.</p>
+<p><strong>4. Wonderful series by OpenZeppelin</strong>:</p>
+<ul>
+<li><a href="https://blog.openzeppelin.com/ethereum-in-depth-part-1-968981e6f833/"><code>Part 1</code></a></li>
+<li><a href="https://blog.openzeppelin.com/ethereum-in-depth-part-2-6339cf6bddb9/"><code>Part 2</code></a></li>
+</ul>
+<p><strong>5. Deconstructing a Smart Contract Series by OpenZeppelin</strong>:</p>
+<ul>
+<li><a href="https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/"><code>Part 1</code></a></li>
+<li><a href="https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-ii-creation-vs-runtime-6b9d60ecb44c/"><code>Part 2</code></a></li>
+<li><a href="https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-iii-the-function-selector-6a9b6886ea49/"><code>Part 3</code></a></li>
+<li><a href="https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-iv-function-wrappers-d8e46672b0ed/"><code>Part 4</code></a></li>
+<li><a href="https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-v-function-bodies-2d19d4bef8be/"><code>Part 5</code></a></li>
+<li><a href="https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-vi-the-swarm-hash-70f069e22aef/"><code>Part 6</code></a></li>
+</ul>
+<p><strong><a href="https://github.com/ethereumbook/ethereumbook"><code>6. Mastering Ethereum</code></a></strong>: The iconical Ethereum book by Andreas Antonopoulos. This a must read.</p>
+<p><strong><a href="https://eth.wiki/en/concepts/evm/ethereum-virtual-machine-(evm)-awesome-list"><code>7.Eth Wiki</code></a></strong>: A comprehensive list of resources related to the EVM.</p>
+<p><strong><a href="https://igor.io/2013/08/28/stack-machines-fundamentals.html"><code>8. Stack Machine Fundamentals</code></a></strong>: Simple explanation about stack machines.</p>
+<p><strong><a href="https://igor.io/2013/08/28/stack-machines-fundamentals.html"><code>9. Stack Machine Fundamentals</code></a></strong>: Simple explanation about stack machines.</p>
+<p><strong><a href="https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf"><code>10. EVM Illustrated</code></a></strong>: Amazing illustration of the EVM in pdf format.</p>
+<p><strong><a href="https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf"><code>11. EVM Illustrated</code></a></strong>: Amazing illustration of the EVM in pdf format.</p>
+<p><strong><a href="https://medium.com/cybermiles/diving-into-ethereums-world-state-c893102030ed"><code>12. Diving into Ethereum's World State</code></a></strong>: Blog post written by Timothy McCallum, explaining Ethereum's world state.</p>
+<p><strong><a href="https://www.youtube.com/watch?v=RxL_1AfV7N4"><code>13. From Solidity to Bytecode, Memory and Storage</code></a></strong>: Great Hands-On video by the Ethereum Engineering Group.</p>
+<p><strong><a href="https://ethereum.org/en/developers/tutorials/reverse-engineering-a-contract/"><code>14. Reverse Engineering a Contract</code></a></strong>: Understand a contract by having just the bytecode (NO SOURCE!).</p>
+<p><strong><a href="https://programtheblockchain.com/posts/2018/03/09/understanding-ethereum-smart-contract-storage/"><code>15. Understanding Storage</code></a></strong>: Simple and easy to grasp explanation on how Ethereum's storage works.</p>
+<p><strong><a href="https://medium.com/@blockchain101/solidity-bytecode-and-opcode-basics-672e9b1a88c2"><code>16. Bytecode and Opcode Basics</code></a></strong>: Blog post written by Bernard Peh, explaining the basics of bytecode and opcode.</p>
+<p><strong><a href="https://www.evm.codes/playground"><code>17. Opcodes Playground</code></a></strong>: Opcodes Playground.</p>
+<p><strong><a href="https://docs.soliditylang.org/en/v0.8.13/introduction-to-smart-contracts.html#the-ethereum-virtual-machine"><code>18. The Ethereum Virtual Machine - Solidity Docs</code></a></strong>: Explanation of the EVM in the Solidity docs.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="smart-contract-languages"><a class="header" href="#smart-contract-languages">Smart Contract Languages</a></h1>
+<p>https://defillama.com/languages</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="solidity-resources"><a class="header" href="#solidity-resources"><strong>Solidity Resources</strong></a></h2>
+<p><strong><a href="https://docs.soliditylang.org/"><code>1.Solidity Docs</code></a></strong>: Solidity main Documentation.</p>
+<p><strong><a href="https://www.youtube.com/channel/UCJWh7F3AFyQ_x01VKzr9eyA"><code>2.Smart Contract Programmer</code></a></strong>: Great Youtube channel about Solidity.</p>
+<p><strong><a href="https://solidity-by-example.org/"><code>3.Solidity by Example</code></a></strong>: Solidity examples of the most common patterns.</p>
+<p><strong><a href="https://www.smartcontract.engineer/challenges"><code>4.Smart Contract Engineer</code></a></strong>: Interactive way to learn Solidity.</p>
+<p><strong><a href="https://www.tutorialspoint.com/solidity/index.htm"><code>5. Solidity Tutorial</code></a></strong>: Solidity Tutorial - tutorialspoin.</p>
+<p><strong><a href="https://blog.soliditylang.org/"><code>6. Solidity Blog</code></a></strong>: Solidity Blog, news about new features and bug fixes.</p>
+<p><strong><a href="https://cryptozombies.io/"><code>7. Crypto Zombies</code></a></strong>: Interactive game to learn Solidity.</p>
+<p><strong><a href="https://ethereum.org/en/developers/docs/smart-contracts/languages/"><code>8. Ethereum main site</code></a></strong>: Smart contract languages from Ethereum.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="yuul"><a class="header" href="#yuul">Yuul</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vyper"><a class="header" href="#vyper">Vyper</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="smart-contracts"><a class="header" href="#smart-contracts">Smart Contracts</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basics"><a class="header" href="#basics">Basics</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="security"><a class="header" href="#security">Security</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tools--libraries"><a class="header" href="#tools--libraries">Tools / Libraries</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="developer-environment"><a class="header" href="#developer-environment">Developer Environment</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fuzzers"><a class="header" href="#fuzzers">Fuzzers</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="security-1"><a class="header" href="#security-1">Security</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rollups"><a class="header" href="#rollups">Rollups</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="optimistic"><a class="header" href="#optimistic">Optimistic</a></h1>
+<p><strong><a href="https://ethereum.github.io/yellowpaper/paper.pdf"><code>1.Optimism</code></a></strong>:  Main Ethereum Specification.</p>
+<p><strong><a href="https://github.com/chronaeon/beigepaper/blob/master/beigepaper.pdf"><code>2. Beige Paper</code></a></strong>: More digestable than the Yellow Paper.</p>
+<p><strong><a href="https://noxx.substack.com/"><code>3. Evm-Deep-Dives by Noxx</code></a></strong>: Great hands-on explanation of how the EVM works.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="zero-knowledge"><a class="header" href="#zero-knowledge">Zero Knowledge</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="plasma"><a class="header" href="#plasma">Plasma</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cryptography"><a class="header" href="#cryptography">Cryptography</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ecdsa"><a class="header" href="#ecdsa">ECDSA</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="snor"><a class="header" href="#snor">SNOR</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bls"><a class="header" href="#bls">BLS</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hacking"><a class="header" href="#hacking">Hacking</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources-1"><a class="header" href="#resources-1">Resources</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="community--bounty-places"><a class="header" href="#community--bounty-places">Community / Bounty Places</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="games--challenges"><a class="header" href="#games--challenges">Games / Challenges</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="defi"><a class="header" href="#defi">DeFi</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources-2"><a class="header" href="#resources-2">Resources</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-merge-former-eth2"><a class="header" href="#the-merge-former-eth2">The Merge (former ETH2)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources-3"><a class="header" href="#resources-3">Resources</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mev"><a class="header" href="#mev">MEV</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources-4"><a class="header" href="#resources-4">Resources</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="podcasts"><a class="header" href="#podcasts">Podcasts</a></h1>
+<p><strong><a href="https://zeroknowledge.fm/"><code>1.Zero Knowledge</code></a></strong></p>
+<p><strong><a href="https://podcasts.apple.com/us/podcast/bankless/id1499409058"><code>2. Bankless</code></a></strong></p>
+<p><strong><a href="https://podcasts.apple.com/us/podcast/the-defiant-defi-podcast/id1512654905"><code>3. The Defiant</code></a></strong></p>
+<p><strong><a href="https://uncommoncore.co/podcast/"><code>4. Uncommon Core</code></a></strong></p>
+<p><strong><a href="https://open.spotify.com/show/7dgxKMkSyy3HWtQW7OfqXA"><code>5. Ethereum Cat Herders</code></a></strong></p>
+<p><strong><a href="https://delphidigital.io/podcast"><code>6. The Delphi Podcast</code></a></strong></p>
+<p><strong><a href="https://uponly.tv/"><code>7. UpOnly</code></a></strong></p>
+<p><strong><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8xOTY1ODQxLnJzcw?sa=X&amp;ved=0CAMQ4aUDahcKEwjg4t_PkIf3AhUAAAAAHQAAAAAQAQ&amp;hl=en-ES"><code>8. Burning Bridges</code></a></strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>
