@@ -1,9 +1,4 @@
----
-description: >-
-  The blockchain ecosystem moves extremely fast. This means that a lot of things
-  that we learn today are going to be outdated tomorrow. Being able to share
-  information is extremely important..
----
+
 
 # Welcome to the EVM book
 
